@@ -1,0 +1,145 @@
+$agent-item-bg: #CEE3B2;
+$form-add-bg: #E0EAD1;
+$form-add-border-color: #594D2D;
+$arrow-width: 40px;
+
+* {
+  box-sizing: border-box;
+}
+
+.agent-items {
+  padding: 15px;
+  border: 2px solid #232425;
+  min-height: 600px;
+}
+
+.agent-item {
+  position: relative;
+  background-color: $agent-item-bg;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 2px solid #999;
+  &.building {
+    background-color: #FEFAB8;
+  }
+  a {
+    color: #232425;
+  }
+}
+
+.item-brand {
+  height: 40px;
+  width: 40px;
+  background-color: #888;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: absolute;
+}
+
+.item-info {
+  span {
+    position: relative;
+    &::after {
+      right: 0;
+      top: 5px;
+      width: 1px;
+      height: 12px;
+      content: '';
+      background-color: #999999;
+      position: absolute;
+    }
+    padding: 0 5px;
+    &:first-child {
+      font-weight: 700;
+      padding-right: 30px;
+    }
+    &:last-child::after {
+      display: none;
+    }
+  }
+}
+
+.item-detail {
+  padding-left: 60px;
+}
+
+.item-add {
+  position: relative;
+  font-size: 14px;
+  a {
+    color: #232425;
+    padding-right: 5px;
+    position: relative;
+    &::after {
+      right: 0;
+      top: 5px;
+      width: 1px;
+      height: 12px;
+      content: '';
+      background-color: #999999;
+      position: absolute;
+    }
+  }
+}
+
+.item-resource-detail {
+  margin-left: 5px;
+  font-size: 14px;
+  a {
+    color: red;
+    cursor: pointer;
+    border: 1px solid #999999;
+    display: inline-block;
+    border-radius: 6px;
+    height: 14px;
+    line-height: 9px;
+    width: 14px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+}
+.form-add {
+  font-size: 14px;
+  padding: 10px;
+  position: absolute;
+  background-color: $form-add-bg;
+  border: 2px solid $form-add-border-color;
+  border-radius: 10px;
+  width: 60%;
+  top: 70px;
+  z-index: 9;
+  button {
+    margin-right: 10px;
+    border-radius: 15px;
+    border: 2px solid darken($form-add-border-color, 50%);
+    padding: 3px 10px;
+    cursor: pointer;
+  }
+  input {
+    width: 100%;
+    margin: 10px 0;
+  }
+  &:after, &:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $arrow-width / 2;
+  }
+
+  &:before {
+    top: - $arrow-width;
+    left: $arrow-width / 2;
+    border-color: transparent transparent darken($form-add-border-color, 50%) transparent;
+
+  }
+  &:after {
+    top: 1 - $arrow-width;
+    left: $arrow-width / 2;
+    border-color: transparent transparent $form-add-bg transparent;
+  }
+}

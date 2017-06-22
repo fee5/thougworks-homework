@@ -1,0 +1,32 @@
+$filter-bg: #585756;
+
+.tab-filter {
+  background-color: $filter-bg;
+  padding: 15px;
+  border: 2px solid darken($filter-bg, 20%);
+  border-bottom: 0;
+  text-transform: capitalize;
+  color: #ffffff;
+  div {
+    float: left;
+    &:first-child {
+      font-size: 18px;
+      padding: 2px 0;
+    }
+  }
+}
+.tab-filt {
+  color: #232425;
+  cursor: pointer;
+  text-transform: capitalize;
+  background-color: lighten($filter-bg, 20%);
+  border: 1px solid darken($filter-bg, 20%);
+  margin-left: 15px;
+  padding: 5px;
+  text-align: center;
+  min-width: 50px;
+  border-radius: 20px;
+  &.active {
+    background-color: lighten($filter-bg, 50%);
+  }
+}
