@@ -14,7 +14,7 @@ class Root extends PureComponent {
   render() {
     return (
       <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename='thougworks-homework'>
           <Container />
         </BrowserRouter>
       </Provider>

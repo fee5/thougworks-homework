@@ -12,7 +12,7 @@ export default class Root extends PureComponent {
     const { state, location } = this.props
     return (
       <Provider store={createStore(state)}>
-        <StaticRouter context={context} location={location}>
+        <StaticRouter basename='thougworks-homework' context={context} location={location}>
           <Container />
         </StaticRouter>
       </Provider>
